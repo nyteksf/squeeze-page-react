@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./home.css";
 
@@ -6,9 +6,12 @@ const Home = () => {
   {
     /* WHEN ENTER KEY/START BUTTON IS CLICKED, MAKE VIDEO SECTION & CONTACT FORM VISIBLE & SCROLL TO VIDEO SECTION, WITH CTA BUTTON THERE TO GO DOWN TO "FORMS" AKA PHONE AND CHATBOT LINKS */
   }
+  const [isVisible, setIsVisible] = useState(false);
+
   const startBtnRef = useRef(null);
   const videoSectionRef = useRef(null);
   const optionsSectionRef = useRef(null);
+  const footerRef = useRef(null);
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -47,7 +50,9 @@ const Home = () => {
   const handleShowOptions = () => {
     if (optionsSectionRef.current) {
       // Make the video section visible
+      setIsVisible(!isVisible);
       optionsSectionRef.current.style.display = "flex"; // Show the video section
+      footerRef.current.style.display = "flex"; // Show the video section
 
       // Scroll to the video section smoothly
       optionsSectionRef.current.scrollIntoView({ behavior: "smooth" });
@@ -181,7 +186,9 @@ const Home = () => {
               </a>
               <p className="microtext">
                 A live operator who understands land sales and can see if your
-                offer is accepted, immediately.
+                ideal price is accepted, immediately.
+                <br />
+                (Quickest.)
               </p>
             </div>
             <div className="contact-option">
@@ -195,7 +202,9 @@ const Home = () => {
               </a>
               <p className="microtext">
                 No humans. No pressure. Talk to our bot and get a response on
-                your cash offer in minutes.
+                your price offer in minutes.
+                <br />
+                (Easiest.)
               </p>
             </div>
             <div className="contact-option">
@@ -225,6 +234,91 @@ const Home = () => {
           </p>
         </div>
       </section>
+      <footer className="site-footer" ref={footerRef}>
+        <hr
+          className="splitter"
+          style={{
+            display: isVisible ? "block" : "none", // Conditionally show/hide the HR
+          }}
+        />
+        <div className="footer-container">
+          <div className="footer-inner">
+            <div className="footer-brand">
+              <div className="footer-logo">
+                <img
+                  src="/logo-sm-1a.png"
+                  className="logo-sm"
+                  alt="small logo"
+                />
+              </div>
+              <p className="footer-tagline">
+                <em>"From Land to Deed, Covered Bridge Leads."</em>
+              </p>
+            </div>
+            <div className="footer-links">
+              <div className="footer-column">
+                <h3 className="footer-heading">Explore</h3>
+                <ul>
+                  <li>
+                    <a href="/properties" className="footer-link">
+                      Properties
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/faq">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="/vip-list">VIP List</a>
+                  </li>
+                  <li>
+                    <a href="/about">About</a>
+                  </li>
+                  <li>
+                    <a href="/testimonials">Testimonials</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h3 className="footer-heading">Legal</h3>
+                <ul>
+                  <li>
+                    <a href="/terms">Terms & Conditions</a>
+                  </li>
+                  <li>
+                    <a href="/privacy">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h3 className="footer-heading">Follow Us</h3>
+                <ul className="footer-social">
+                  <li>
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Facebook
+                    </a>
+                  </li>
+                  {/* Add others as needed: YouTube, IG, Twitter */}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>
+            &copy; {new Date().getFullYear()} Covered Bridge Properties LLC. All
+            rights reserved.
+          </p>
+        </div>
+      </footer>
     </>
   );
 };
