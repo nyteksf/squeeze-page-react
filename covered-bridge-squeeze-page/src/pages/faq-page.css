@@ -1,0 +1,9 @@
+.faq-page .card-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.faq-page .card__p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
