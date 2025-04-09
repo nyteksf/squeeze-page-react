@@ -1,3 +1,25 @@
+.about-container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.about__header {
+  margin-bottom: 2rem;
+}
+
 .faq-page .card-icon {
   font-size: 2rem;
   color: var(--primary-color);
@@ -6,4 +28,23 @@
 .faq-page .card__p {
   margin-top: 0.5rem;
   line-height: 1.6;
+}
+
+.cta {
+  margin: 4rem 0;
+}
+
+.cta h2 {
+  margin: 0 auto 32px auto;
+}
+
+.faq__header-img {
+  height: auto;
+  width: 450px;
+}
+
+.card__p--main {
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  margin-bottom: 0.5rem;
 }

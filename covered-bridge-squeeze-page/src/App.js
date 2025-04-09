@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import FaqPage from "./pages/FaqPage";
 import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 import "./App.css";
 
@@ -12,10 +15,16 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          {/* HOME */}
           <Route path="/" element={<Home />} />
+          {/* OTHER */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/faq" element={<FaqPage />} />
-          {/* Catch-all 404 route -- ADD MY CAT ONE FROM OTHER PROJECT */}
+          <Route path="/contact" element={<ContactPage />} />
+          {/* LEGAL */}
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          {/* 404 ROUTE -- ADD MY CAT ONE FROM OTHER PROJECT */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

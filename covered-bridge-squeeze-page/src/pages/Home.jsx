@@ -1,15 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
 
 import LoadingState from "../components/LoadingState";
 import ScrollReveal from "../components/ScrollReveal";
 
 import "./home.css";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,9 +50,6 @@ const Home = () => {
 
       // Scroll to the video section smoothly
       videoSectionRef.current.scrollIntoView({ behavior: "smooth" });
-
-      // Show "return to top" button
-      setIsVisible(true);
     }
 
     console.log("START button clicked or Enter key pressed");
@@ -80,6 +72,9 @@ const Home = () => {
 
       // Scroll to the video section smoothly
       optionsSectionRef.current.scrollIntoView({ behavior: "smooth" });
+
+      // Show footer
+      setIsVisible(true);
     }
 
     console.log("Show options button was clicked");
@@ -251,7 +246,11 @@ const Home = () => {
               </ScrollReveal>
             </div>
           </section>
-          <section id="contact-options" className="contact-options" ref={optionsSectionRef}>
+          <section
+            id="contact-options"
+            className="contact-options"
+            ref={optionsSectionRef}
+          >
             <div className="contact-options--inner">
               <ScrollReveal direction="right">
                 <h2 className="contact-header">
@@ -345,103 +344,7 @@ const Home = () => {
               </ScrollReveal>
             </div>
           </section>
-          <footer className="site-footer" ref={footerRef}>
-            <hr
-              className="splitter"
-              style={{
-                display: isVisible ? "block" : "none", // Conditionally show/hide the HR
-              }}
-            />
-            <div className="footer-container">
-              <div className="footer-inner">
-                <ScrollReveal direction="left">
-                  <div className="footer-brand">
-                    <div className="footer-logo">
-                      <img
-                        src="/logo-sm-1a.png"
-                        className="logo-sm"
-                        alt="small logo"
-                      />
-                    </div>
-                    <p className="footer-tagline">
-                      <em>"From Land to Deed, Covered Bridge Leads."</em>
-                    </p>
-                  </div>
-                </ScrollReveal>
-
-                <div className="footer-links">
-                  <ScrollReveal direction="up" delay={0.1}>
-                    <div className="footer-column footer-column-1">
-                      <h3 className="footer-heading">Explore</h3>
-                      <ul>
-                        <li className="footer-link">
-                          <a href="/faq">FAQ</a>
-                        </li>
-                        <li className="footer-link">
-                          <a href="/about">About</a>
-                        </li>
-                        <li className="footer-link">
-                          <a href="/testimonials">Testimonials</a>
-                        </li>
-                        <li className="footer-link">
-                          <a href="/contact">Contact</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </ScrollReveal>
-
-                  <ScrollReveal direction="up" delay={0.2}>
-                    <div className="footer-column footer-column-2">
-                      <h3 className="footer-heading">Legal</h3>
-                      <ul>
-                        <li className="footer-link">
-                          <a href="/terms">Terms & Conditions</a>
-                        </li>
-                        <li className="footer-link">
-                          <a href="/privacy">Privacy Policy</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </ScrollReveal>
-
-                  <ScrollReveal direction="up" delay={0.3}>
-                    <div className="footer-column footer-column-3">
-                      <ul className="footer__list-4 footer__list">
-                        <li>
-                          <h2 className="footer-heading">Follow Us</h2>
-                        </li>
-                        <li className="footer__list-item">
-                          <ul className="footer__social-links">
-                            <li className="footer__list-item footer__list-item--social">
-                              <div className="footer__social-link footer__social-link--facebook">
-                                <FontAwesomeIcon icon={faFacebook} />
-                              </div>
-                            </li>
-                            <li className="footer__list-item footer__list-item--social">
-                              <div className="footer__social-link footer__social-link--twitter">
-                                <FontAwesomeIcon icon={faTwitter} />
-                              </div>
-                            </li>
-                            <li className="footer__list-item footer__list-item--social">
-                              <div className="footer__social-link footer__social-link--instagram">
-                                <FontAwesomeIcon icon={faInstagram} />
-                              </div>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </ScrollReveal>
-                </div>
-              </div>
-            </div>
-            <div className="footer-bottom">
-              <p>
-                &copy; {new Date().getFullYear()} Covered Bridge Properties LLC.
-                All rights reserved.
-              </p>
-            </div>
-          </footer>
+          <Footer footerRef={footerRef} isVisible={isVisible} ScrollReveal={ScrollReveal}/>
         </>
       )}
     </>
