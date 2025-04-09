@@ -9,13 +9,22 @@ import { Link } from "react-router";
 const PrivacyPolicy = ({ footerRef }) => {
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simulate loading for demo purposes; remove or adjust this as needed.
   useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
+
+    // Using window.onload to ensure all resources are loaded
+    // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
+    }, 4000); // 4 seconds fallback
+
+    return () => {
+      clearTimeout(timer); // Clean up the timer
+    };
   }, []);
+
   return (
     <>
       {isLoading ? (
@@ -228,7 +237,6 @@ const PrivacyPolicy = ({ footerRef }) => {
               </p>
             </section>
           </main>
-
           <Footer footerRef={footerRef} isVisible="false" />
         </div>
       )}

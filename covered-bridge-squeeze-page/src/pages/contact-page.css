@@ -33,7 +33,7 @@
 
 .phone-anchor,
 .email-anchor {
-  color: #242424;
+  color: #181818;
   font-weight: 700;
 }
 
@@ -53,6 +53,16 @@
 
 .contact__submit-btn:hover {
   animation: jiggle 0.6s ease-in-out;
+}
+
+.phone__final-blurb,
+.phone__blurb {
+  font-weight: 600;
+}
+
+.office-hours--final-blurb {
+  color: #181818;
+  font-weight: 600;
 }
 
 @keyframes jiggle {

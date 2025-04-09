@@ -17,12 +17,20 @@ const ContactPage = () => {
   const footerRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simulate loading (for demo purposes)
   useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
+
+    // Using window.onload to ensure all resources are loaded
+    // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
+    }, 4000); // 4 seconds fallback
+
+    return () => {
+      clearTimeout(timer); // Clean up the timer
+    };
   }, []);
 
   return (
@@ -57,7 +65,7 @@ const ContactPage = () => {
                 <p className="card__p">
                   <a
                     className="email-anchor"
-                    href="mailto:info@coveredbridgeproperties.com"
+                    href="mailto:info@coveredbridge.properties"
                   >
                     info@coveredbridge.properties
                   </a>
@@ -74,11 +82,9 @@ const ContactPage = () => {
                     (702) 555-1234
                   </a>
                   <br />
-                  Mon–Sun: 24/7 Operator Service
+                  <span className="phone__blurb">Mon–Sun: 24/7 Operator Service</span>
                   <br />
-                  <small>
-                    <em>(Calls returned within one business day)</em>
-                  </small>
+                    <span className="phone__final-blurb">(Calls returned within one business day)</span>
                 </p>
               </article>
 
@@ -106,7 +112,7 @@ const ContactPage = () => {
                   <br />
                   Weekends: Closed
                   <br />
-                  We respond within 24 hours.
+                  <span className="office-hours--final-blurb">We respond within 24 hours.</span>
                 </p>
               </article>
             </section>

@@ -7,13 +7,13 @@ import "./home.css";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
+  const footerRef = useRef(null);
   const startBtnRef = useRef(null);
   const videoSectionRef = useRef(null);
   const optionsSectionRef = useRef(null);
-  const footerRef = useRef(null);
 
   useEffect(() => {
     // Using window.onload to ensure all resources are loaded
@@ -344,7 +344,11 @@ const Home = () => {
               </ScrollReveal>
             </div>
           </section>
-          <Footer footerRef={footerRef} isVisible={isVisible} ScrollReveal={ScrollReveal}/>
+          <Footer
+            footerRef={footerRef}
+            isVisible={isVisible}
+            ScrollReveal={ScrollReveal}
+          />
         </>
       )}
     </>

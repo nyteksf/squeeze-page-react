@@ -17,12 +17,20 @@ const AboutPage = () => {
   const footerRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simulate loading for demo purposes; remove or adjust this as needed.
   useEffect(() => {
+    window.onload = () => {
+      setIsLoading(false);
+    };
+
+    // Using window.onload to ensure all resources are loaded
+    // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
+    }, 4000); // 4 seconds fallback
+
+    return () => {
+      clearTimeout(timer); // Clean up the timer
+    };
   }, []);
 
   return (
@@ -142,7 +150,7 @@ const AboutPage = () => {
                 <br /> a Brighter Financial Future?
               </h2>
               <a
-                href="http://localhost:3000/#contact-options"
+                href="http://localhost:3000/contact"
                 className="btn about__submit-btn"
               >
                 Get <strong>Your</strong> Cash Offer Today
