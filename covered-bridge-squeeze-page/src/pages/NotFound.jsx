@@ -5,7 +5,7 @@ import "./not-found.css";
 
 const PageNotFound = () => {
   return (
-    <div className="container">
+    <div className="container error-404-container">
       <div className="row">
         <div className="error-msg-404--wrapper">
           <img
@@ -29,7 +29,7 @@ const PageNotFound = () => {
               URL?
             </p>
             <Link to="/">
-              <button className="btn-404 btn">Back to Home</button>
+              <button className="btn-404">Back to Home</button>
             </Link>
           </div>
         </div>

@@ -20,15 +20,15 @@ const FaqPage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Using window.onload to ensure all resources are loaded
     window.onload = () => {
       setIsLoading(false);
     };
 
-    // Using window.onload to ensure all resources are loaded
     // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // 4 seconds fallback
+    }, 3500); // 3.5 seconds fallback
 
     return () => {
       clearTimeout(timer); // Clean up the timer

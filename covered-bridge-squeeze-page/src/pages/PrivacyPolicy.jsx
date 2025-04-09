@@ -10,11 +10,11 @@ const PrivacyPolicy = ({ footerRef }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Using window.onload to ensure all resources are loaded
     window.onload = () => {
       setIsLoading(false);
     };
 
-    // Using window.onload to ensure all resources are loaded
     // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);

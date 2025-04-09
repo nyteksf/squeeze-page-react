@@ -19,7 +19,7 @@ const TermsAndConditions = () => {
     // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // 4 seconds fallback
+    }, 3500); // 3.5 seconds fallback
 
     return () => {
       clearTimeout(timer); // Clean up the timer

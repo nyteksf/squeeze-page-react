@@ -26,7 +26,7 @@ const AboutPage = () => {
     // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // 4 seconds fallback
+    }, 3500); // 3.5 seconds fallback
 
     return () => {
       clearTimeout(timer); // Clean up the timer
@@ -137,9 +137,9 @@ const AboutPage = () => {
 
             <section className="testimonial">
               <p className="card__p">
-                "Working with Covered Bridge Properties was so easy. I didn't
-                have to lift a finger. Joe was able to handle closing and paying
-                me cash in just under two weeks."
+                "Working with Covered Bridge was easy. I didn't have to lift a
+                finger throughout the entire process. And he paid me in under
+                two weeks just like he said."
               </p>
               <p className="testimonial-author">— John D., Property Seller</p>
             </section>

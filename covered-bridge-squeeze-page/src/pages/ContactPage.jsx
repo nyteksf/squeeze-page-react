@@ -18,15 +18,15 @@ const ContactPage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Using window.onload to ensure all resources are loaded
     window.onload = () => {
       setIsLoading(false);
     };
 
-    // Using window.onload to ensure all resources are loaded
     // Fallback timeout in case onload doesn't trigger
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // 4 seconds fallback
+    }, 3500); // 3.5 seconds fallback
 
     return () => {
       clearTimeout(timer); // Clean up the timer
@@ -82,9 +82,13 @@ const ContactPage = () => {
                     (702) 555-1234
                   </a>
                   <br />
-                  <span className="phone__blurb">Mon–Sun: 24/7 Operator Service</span>
+                  <span className="phone__blurb">
+                    Mon–Sun: 24/7 Operator Service
+                  </span>
                   <br />
-                    <span className="phone__final-blurb">(Calls returned within one business day)</span>
+                  <span className="phone__final-blurb">
+                    (Calls returned within one business day)
+                  </span>
                 </p>
               </article>
 
@@ -112,7 +116,9 @@ const ContactPage = () => {
                   <br />
                   Weekends: Closed
                   <br />
-                  <span className="office-hours--final-blurb">We respond within 24 hours.</span>
+                  <span className="office-hours--final-blurb">
+                    We respond within 24 hours.
+                  </span>
                 </p>
               </article>
             </section>
@@ -120,7 +126,7 @@ const ContactPage = () => {
             <section className="cta">
               <h2>Prefer to send a message right now?</h2>
               <a
-                href="http://localhost:3000/#contact-options"
+                href="mailto:info@coveredbridge.properties"
                 className="btn contact__submit-btn"
               >
                 Message Us Now

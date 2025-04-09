@@ -4,66 +4,85 @@
 
 */
 
+.error-404-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: calc(100vw - 2rem);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
 .error-msg-404--wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .img-404 {
-    width: 50%;
+  width: 50%;
+  z-index: 999;
 }
 
 .error-msg-404--msg {
-    margin-top: -64px;
+  margin-top: -64px;
 }
 
 .error-msg-404--para {
-    letter-spacing: 0.15px;
-    color: #333;
-    color: #333333f6;
+  letter-spacing: 0.15px;
+  color: #333;
+  color: #333333f6;
 }
 
 .error-msg-404--para-1 {
-    margin-top: -4px;
-    margin-bottom: 4px;
+  margin-top: -4px;
+  margin-bottom: -2px;
 }
 
 .error-msg-404--para-2 {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .error-msg-404--msg {
-    margin-top: -64px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #333;
+  margin-top: -64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
 }
 
 .btn-404 {
-    letter-spacing: 0.1px;
-    border: 2px solid rgba(199, 0, 199, 0.847);
-    transition: all 300ms;
-    background-color: transparent;
-    color: #333;
-    padding: 12px 24px;
-    font-size: 20px;
-    font-weight: 400;
-    color: #333;
-    cursor: pointer;
+  letter-spacing: 0.1px;
+  border: 2px solid var(--primary);
+  transition: all 300ms;
+  background-color: transparent !important;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  border-top-left-radius: 40px !important;
+  border-top-right-radius: 40px !important;
+  border-bottom-left-radius: 40px !important;
+  border-bottom-right-radius: 40px !important;
 }
 
 .btn-404:hover {
-    background-color: transparent;
-    color: slategray;
-    border: 2px solid rgba(199, 0, 199, 0.847);
+  background-color: var(--primary);
+  color: #333333d3;
+  transition: all 350ms ease;
 }
 
 .btn-404:active {
-    border: none;
+  border: none;
 }
 
 .error-msg-404--title {
-    letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
 }
