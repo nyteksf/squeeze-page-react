@@ -12,6 +12,7 @@ const PrivacyPolicy = ({ footerRef }) => {
   useEffect(() => {
     // Using window.onload to ensure all resources are loaded
     window.onload = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsLoading(false);
     };
 

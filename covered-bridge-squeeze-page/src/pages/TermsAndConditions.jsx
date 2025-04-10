@@ -12,6 +12,7 @@ const TermsAndConditions = () => {
 
   useEffect(() => {
     window.onload = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsLoading(false);
     };
 

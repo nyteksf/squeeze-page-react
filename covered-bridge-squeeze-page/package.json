@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
@@ -16,6 +17,7 @@
     "react-router": "^7.5.0",
     "react-router-dom": "^7.5.0",
     "react-scripts": "5.0.1",
+    "sonner": "^2.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

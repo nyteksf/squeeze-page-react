@@ -10,15 +10,20 @@ import {
 
 import Footer from "../components/Footer";
 import LoadingState from "../components/LoadingState";
+import ContactMeModal from "../components/ContactMeModal";
 
 import "./about-page.css";
 
 const AboutPage = () => {
   const footerRef = useRef(null);
+
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
     window.onload = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsLoading(false);
     };
 
@@ -33,8 +38,27 @@ const AboutPage = () => {
     };
   }, []);
 
+  const launchContactModal = (e) => {
+    e.preventDefault();
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // First set the animation state to true
+    setIsModalAnimating(true);
+
+    // Then open the modal
+    setTimeout(() => {
+      setIsModalOpen(true);
+    }, 500);
+  };
+
   return (
     <>
+      <ContactMeModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        setIsModalAnimating={setIsModalAnimating}
+      />
       {isLoading ? (
         <LoadingState />
       ) : (
@@ -150,8 +174,9 @@ const AboutPage = () => {
                 <br /> a Brighter Financial Future?
               </h2>
               <a
-                href="http://localhost:3000/contact"
+                href="#"
                 className="btn about__submit-btn"
+                onClick={launchContactModal}
               >
                 Get <strong>Your</strong> Cash Offer Today
               </a>

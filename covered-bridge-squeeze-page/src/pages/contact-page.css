@@ -65,6 +65,11 @@
   font-weight: 600;
 }
 
+.card__divider {
+  width: 100%;
+  max-width: 106px;
+}
+
 @keyframes jiggle {
   0% {
     transform: translateX(0);

@@ -12,16 +12,21 @@ import {
 
 import Footer from "../components/Footer";
 import LoadingState from "../components/LoadingState";
+import ContactMeModal from "../components/ContactMeModal";
 
 import "./faq-page.css";
 
 const FaqPage = () => {
   const footerRef = useRef(null);
+
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
     // Using window.onload to ensure all resources are loaded
     window.onload = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsLoading(false);
     };
 
@@ -35,8 +40,27 @@ const FaqPage = () => {
     };
   }, []);
 
+  const launchContactModal = (e) => {
+    e.preventDefault();
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // First set the animation state to true
+    setIsModalAnimating(true);
+
+    // Then open the modal
+    setTimeout(() => {
+      setIsModalOpen(true);
+    }, 500);
+  };
+
   return (
     <>
+      <ContactMeModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        setIsModalAnimating={setIsModalAnimating}
+      />
       {isLoading ? (
         <LoadingState />
       ) : (
@@ -169,10 +193,11 @@ const FaqPage = () => {
             <section className="cta">
               <h2>Want clarity on something not covered above?</h2>
               <a
-                href="http://localhost:3000/contact"
+                href="#"
                 className="btn about__submit-btn"
+                onClick={launchContactModal}
               >
-                Contact Us With Your Question
+                Contact Us With Your Question Here
               </a>
               <div className="contact-info">
                 <div className="contact-item">

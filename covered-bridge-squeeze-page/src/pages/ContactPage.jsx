@@ -10,16 +10,20 @@ import {
 
 import Footer from "../components/Footer";
 import LoadingState from "../components/LoadingState";
+import ContactMeModal from "../components/ContactMeModal";
 
 import "./contact-page.css";
 
 const ContactPage = () => {
   const footerRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
     // Using window.onload to ensure all resources are loaded
     window.onload = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsLoading(false);
     };
 
@@ -33,8 +37,27 @@ const ContactPage = () => {
     };
   }, []);
 
+  const launchContactModal = (e) => {
+    e.preventDefault();
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // First set the animation state to true
+    setIsModalAnimating(true);
+
+    // Then open the modal
+    setTimeout(() => {
+      setIsModalOpen(true);
+    }, 500);
+  };
+
   return (
     <>
+      <ContactMeModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        setIsModalAnimating={setIsModalAnimating}
+      />
       {isLoading ? (
         <LoadingState />
       ) : (
@@ -62,6 +85,7 @@ const ContactPage = () => {
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
                 <h2 className="gradient-text">Email</h2>
+                <hr className="card__divider" />
                 <p className="card__p">
                   <a
                     className="email-anchor"
@@ -77,6 +101,7 @@ const ContactPage = () => {
                   <FontAwesomeIcon icon={faPhone} />
                 </div>
                 <h2 className="gradient-text">Phone</h2>
+                <hr className="card__divider" />
                 <p className="card__p">
                   <a className="phone-anchor" href="tel:+17025551234">
                     (702) 555-1234
@@ -97,6 +122,7 @@ const ContactPage = () => {
                   <FontAwesomeIcon icon={faMapMarkedAlt} />
                 </div>
                 <h2 className="gradient-text">Mailing Address</h2>
+                <hr className="card__divider" />
                 <p className="card__p">
                   Covered Bridge Properties
                   <br />
@@ -111,6 +137,7 @@ const ContactPage = () => {
                   <FontAwesomeIcon icon={faClock} />
                 </div>
                 <h2 className="gradient-text">Office Hours</h2>
+                <hr className="card__divider" />
                 <p className="card__p">
                   Monday to Friday: 9am – 5pm PST
                   <br />
@@ -124,12 +151,15 @@ const ContactPage = () => {
             </section>
 
             <section className="cta">
-              <h2>Prefer to send a message right now?</h2>
+              <h2>
+                Prefer to send a message <em>right now?</em>
+              </h2>
               <a
-                href="mailto:info@coveredbridge.properties"
+                href="#"
                 className="btn contact__submit-btn"
+                onClick={launchContactModal}
               >
-                Message Us Now
+                Message Us Here
               </a>
             </section>
           </div>
