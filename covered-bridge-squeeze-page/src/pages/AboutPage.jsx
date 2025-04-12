@@ -64,7 +64,7 @@ const AboutPage = () => {
       ) : (
         <div className="container about-container">
           <div className="inner-container">
-            <header>
+            <header className="about__cta-header">
               <Link to="/">
                 <img
                   src="/logo-main.png"

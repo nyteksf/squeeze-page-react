@@ -46,7 +46,7 @@ header {
 /* Logo styling */
 .terms-conditions-logo {
   height: auto;
-  width: 450px;
+  width: 326px;
   margin: 0 auto;
 }
 
@@ -69,10 +69,10 @@ header {
 
 /* Main content styling */
 .legal-content {
-  flex: 1;
+  flex: 1 1;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem;
 }
 
 /* Section styling */
@@ -117,4 +117,16 @@ h3 {
   border-top: 1px solid #ccc;
   font-size: 0.875rem;
   color: #666;
+}
+
+@media (max-size: 768px) {
+  .terms-conditions-logo {
+    height: auto;
+    width: 258px;
+    margin: 0 auto;
+  }
+
+  .hero--sub-txt {
+    margin: 0 3rem 3rem 3rem;
+  }
 }

@@ -239,10 +239,10 @@ const Home = () => {
                   className="btn--cta btn--cta-below-video"
                   onClick={handleShowOptions}
                 >
-                  “I’m Ready To Get Paid For My Land"{" "}
+                  <span className="video-cta--btn-txt">“I’m Ready To Get Paid For My Land"{" "}
                   <span className="cta--arrow">
                     <strong>→</strong>
-                  </span>
+                  </span></span>
                 </button>
               </ScrollReveal>
             </div>

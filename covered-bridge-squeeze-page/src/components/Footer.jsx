@@ -26,101 +26,93 @@ const Footer = ({ footerRef, isVisible = false, ScrollReveal = false }) => {
       />
       <div className="footer-container">
         <div className="footer-inner">
-          <Reveal direction="left">
-            <div className="footer-brand">
-              <div className="footer-logo">
-                <Link to="/">
-                  <img
-                    src="/logo-sm-1a.png"
-                    className="logo-sm"
-                    alt="small logo"
-                  />
-                </Link>
+          <div className="footer-brand-social">
+            <Reveal direction="left">
+              <div className="footer-brand">
+                <div className="footer-logo">
+                  <Link to="/">
+                    <img
+                      src="/logo-sm-1a.png"
+                      className="logo-sm"
+                      alt="small logo"
+                    />
+                  </Link>
+                </div>
+                <p className="footer-tagline">
+                  <em>"From Land to Deed, Covered Bridge Leads."</em>
+                </p>
               </div>
-              <p className="footer-tagline">
-                <em>"From Land to Deed, Covered Bridge Leads."</em>
-              </p>
-            </div>
-          </Reveal>
+            </Reveal>
 
-          <div className="footer-links">
-            <Reveal direction="up" delay={0.1}>
-              <div className="footer-column footer-column-1">
-                <h3 className="footer-heading">Explore</h3>
-                <ul>
-                  <li className="footer-link">
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li className="footer-link">
-                    <Link to="/faq">
-                      FAQ
-                    </Link>
-                  </li>
-                  <li className="footer-link">
-                    <Link to="/about">
-                      About
-                    </Link>
-                  </li>
-                  {/* 
+            <div className="footer-links">
+              <Reveal direction="up" delay={0.1}>
+                <div className="footer-column footer-column-1">
+                  <h3 className="footer-heading">Explore</h3>
+                  <ul>
+                    <li className="footer-link">
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li className="footer-link">
+                      <Link to="/faq">FAQ</Link>
+                    </li>
+                    <li className="footer-link">
+                      <Link to="/about">About</Link>
+                    </li>
+                    {/* 
                   <li className="footer-link">
                     <Link to="/testimonials">Testimonials</Link>
                   </li>
                   */}
-                  <li className="footer-link">
-                    <Link to="/contact">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </Reveal>
+                    <li className="footer-link">
+                      <Link to="/contact">Contact</Link>
+                    </li>
+                  </ul>
+                </div>
+              </Reveal>
 
-            <Reveal direction="up" delay={0.2}>
-              <div className="footer-column footer-column-2">
-                <h3 className="footer-heading">Legal</h3>
-                <ul>
-                  <li className="footer-link">
-                    <Link to="/terms">
-                      Terms & Conditions
-                    </Link>
-                  </li>
-                  <li className="footer-link">
-                    <Link to="/privacy">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </Reveal>
+              <Reveal direction="up" delay={0.2}>
+                <div className="footer-column footer-column-2">
+                  <h3 className="footer-heading">Legal</h3>
+                  <ul>
+                    <li className="footer-link">
+                      <Link to="/terms">Terms & Conditions</Link>
+                    </li>
+                    <li className="footer-link">
+                      <Link to="/privacy">Privacy Policy</Link>
+                    </li>
+                  </ul>
+                </div>
+              </Reveal>
 
-            <Reveal direction="up" delay={0.3}>
-              <div className="footer-column footer-column-3">
-                <ul className="footer__list-4 footer__list">
-                  <li>
-                    <h2 className="footer-heading">Follow Us</h2>
-                  </li>
-                  <li className="footer__list-item">
-                    <ul className="footer__social-links">
-                      <li className="footer__list-item footer__list-item--social">
-                        <div className="footer__social-link footer__social-link--facebook">
-                          <FontAwesomeIcon icon={faFacebook} />
-                        </div>
-                      </li>
-                      <li className="footer__list-item footer__list-item--social">
-                        <div className="footer__social-link footer__social-link--twitter">
-                          <FontAwesomeIcon icon={faTwitter} />
-                        </div>
-                      </li>
-                      <li className="footer__list-item footer__list-item--social">
-                        <div className="footer__social-link footer__social-link--instagram">
-                          <FontAwesomeIcon icon={faInstagram} />
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </Reveal>
+              <Reveal direction="up" delay={0.3}>
+                <div className="footer-column footer-column-3">
+                  <ul className="footer__list-4 footer__list">
+                    <li>
+                      <h2 className="footer-heading">Follow Us</h2>
+                    </li>
+                    <li className="footer__list-item">
+                      <ul className="footer__social-links">
+                        <li className="footer__list-item footer__list-item--social">
+                          <div className="footer__social-link footer__social-link--facebook">
+                            <FontAwesomeIcon icon={faFacebook} />
+                          </div>
+                        </li>
+                        <li className="footer__list-item footer__list-item--social">
+                          <div className="footer__social-link footer__social-link--twitter">
+                            <FontAwesomeIcon icon={faTwitter} />
+                          </div>
+                        </li>
+                        <li className="footer__list-item footer__list-item--social">
+                          <div className="footer__social-link footer__social-link--instagram">
+                            <FontAwesomeIcon icon={faInstagram} />
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>

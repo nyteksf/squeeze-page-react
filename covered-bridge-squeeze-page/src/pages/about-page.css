@@ -31,7 +31,7 @@
 }
 
 .about__header-img {
-  width: 450px;
+  width: 428px;
   height: auto;
 }
 
@@ -285,5 +285,88 @@ header p {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about__header {
+    margin-bottom: 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .contact-subtext {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  .about__header-img {
+    width: 315px;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+  }
+
+  .about__header {
+    margin-top: -22px;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about__header {
+    margin-bottom: 1.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .about__cta-header {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 2rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__p {
+    font-size: 20px;
+    letter-spacing: -0.1px;
+    /* width: 100%; */
+  }
+
+  .about__card-ul {
+    top: 0;
+    margin-left: -1rem;
+    margin-right: 2rem;
+  }
+
+  .about__cta-header {
+    font-size: 1.5rem !important;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+
+  .about-container .cta h2 {
+    margin: 0 auto 32px auto;
+    font-size: 28px;
+  }
+
+  .about__header {
+    margin-bottom: 1.5rem;
+    margin-top: 0rem;
+  }
+
+  .about__submit-btn {
+    font-size: 1.35rem;
   }
 }

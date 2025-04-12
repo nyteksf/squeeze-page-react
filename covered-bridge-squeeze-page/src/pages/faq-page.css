@@ -34,17 +34,25 @@
   margin: 4rem 0;
 }
 
-.cta h2 {
+.about-container .cta h2 {
   margin: 0 auto 32px auto;
+  font-size: 32px;
 }
 
 .faq__header-img {
   height: auto;
-  width: 450px;
+  width: 428px;
 }
 
 .card__p--main {
   font-size: 18px;
   letter-spacing: -0.1px;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .faq__header-img {
+    width: 318px !important;
+    margin-bottom: -0.25rem;
+  }
 }

@@ -19,9 +19,9 @@
 }
 
 .privacy-policy-logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 1rem;
+  margin: 0 auto;
+  height: auto;
+  width: 422px;
 }
 
 .privacy-policy-company-name {
@@ -78,8 +78,10 @@
   margin-top: 0.5rem;
 }
 
-.privacy-policy-logo {
-  margin: 0 auto;
-  height: auto;
-  width: 450px;
+@media (max-width: 768px) {
+  .privacy-policy-logo {
+    margin: 0 auto;
+    height: auto;
+    width: 304px;
+  }
 }

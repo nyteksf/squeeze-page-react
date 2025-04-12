@@ -96,10 +96,17 @@ const FaqPage = () => {
                 </h2>
                 <p className="card__p">
                   We identify properties that have been held long-term, may be
-                  vacant or inherited, and reach out directly to offer cash
-                  purchases with no commissions or agent fees. If you received
-                  our letter, it means we’re ready to buy your property as-is,
-                  fast.
+                  vacant or inherited, and reach out directly to offer{" "}
+                  <strong>cash purchases</strong> with no commissions or agent
+                  fees. If you received our letter, it means{" "}
+                  <strong>we’re ready to buy your property as-is, fast.</strong>{" "}
+                  If this is a follow-up, Covered Bridge wanted to see if
+                  <strong>
+                    {" "}
+                    we could still meet eye to eye in terms of making a
+                    counter-offer agreement
+                  </strong>
+                  .
                 </p>
               </article>
 
