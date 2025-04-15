@@ -43,6 +43,11 @@
 
 .footer-brand {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: -22px;
 }
 
 .footer-logo {
@@ -50,7 +55,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
-  margin: 5px 0 0.5rem 0;
+  margin: 5px 0 0.25rem 0;
 }
 
 .footer-column-1,
@@ -170,6 +175,70 @@
   max-width: 950px;
 }
 
+/*
+.footer__list {
+  margin: 0 auto;
+  padding: 24px 40px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+  */
+
+.footer__social-link--facebook {
+  background-color: transparent;
+  z-index: 500;
+  font-size: 18px !important;
+  transition: all 350ms ease-in !important;
+}
+
+.footer__social-link--twitter {
+  background-color: transparent;
+  font-size: 18px !important;
+  transition: all 350ms ease-in !important;
+}
+
+.footer__social-link--instagram {
+  background-color: transparent;
+  font-size: 18px !important;
+  transition: all 350ms ease-in !important;
+}
+
+.footer__social-link--facebook:hover {
+  background-color: #1877f2;
+  color: #f5f5f5 !important;
+}
+
+.footer__social-link--twitter:hover {
+  background-color: #26a7de;
+  color: #f5f5f5 !important;
+}
+
+.footer__social-link--instagram:hover {
+  background-color: #fbad50;
+  color: #f5f5f5 !important;
+}
+
+.footer__social-links {
+  display: flex;
+}
+
+.footer__social-link {
+  position: relative;
+  margin-right: 24px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.475);
+  border-image: initial;
+  margin: 0 auto;
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
   .footer-brand {
@@ -194,6 +263,7 @@
     transform: translate(0, 0);
     transition: transform 350ms ease;
     text-align: center;
+    margin-bottom: 8px;
   }
 
   .footer__list-item--social {
@@ -222,6 +292,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
   }
 
   .footer__social-link--facebook:hover {
@@ -309,6 +380,14 @@
 
 /* MOBILE: stack vertically */
 @media (max-width: 768px) {
+  .footer-tagline {
+    font-size: 1rem;
+    color: #ccc;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+  }
+
   .footer-links {
     flex-direction: column;
     align-items: center;
@@ -341,6 +420,7 @@
   }
 }
 
+/* REPAIR THE FOOTER DETAILS */
 /* Splitter fix */
 .splitter {
   border: 1px solid #ccc;
