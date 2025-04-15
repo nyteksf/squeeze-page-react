@@ -1,0 +1,251 @@
+/* why-we-exist.css */
+
+:root {
+  --brand-cyan: #00ffff;
+  --brand-brown: #a9746e; /* Soft pastel brown */
+  --brand-blue-dark: #003e5c; /* Deep ocean blue */
+  --background-light: #f9fcfd;
+  --text-primary: #2a2a2a;
+  --accent-soft: #e0f7fa;
+  --highlight-bg: #e6ffff;
+  --soft-contrast: #d7eef0; /* Harmonious blend tone */
+  --section-even: #ffffff;
+  --section-odd: #f5f5f5;
+}
+
+.why-we-exist--wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #cccac7;
+  border-left: solid 8px #d7eef0d4;
+  border-right: solid 8px #d7eef0d4;
+}
+
+.why-we-exist--txt-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.8;
+  background-color: transparent;
+}
+
+.whyweexist--main-logo {
+  height: auto;
+  width: 470px;
+}
+
+.whyweexist--logo-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  border-left: 8px solid var(--brand-cyan);
+  border: 2px solid #a6a6a6;
+}
+
+.whyweexist--logo {
+  width: 160px;
+  height: auto;
+}
+
+.whyweexist--hero-section {
+  background-color: var(--accent-soft);
+  padding: 4rem 2rem;
+  text-align: center;
+  border: 2px solid var(--brand-cyan);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.whyweexist--hero-section h1 {
+  color: var(--brand-blue-dark);
+  font-size: 2.6rem;
+}
+
+/* Content sections with alternating backgrounds */
+.whyweexist--content-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  border: 2px solid #a6a6a6;
+}
+
+/* Apply even/odd backgrounds */
+.whyweexist--content-section:nth-child(odd) {
+  background-color: var(--section-odd);
+}
+
+.whyweexist--content-section:nth-child(even) {
+  background-color: var(--section-even);
+  border: 1px solid var(--soft-contrast);
+}
+
+.whyweexist--content-section h2,
+.whyweexist--solution-section h2,
+.whyweexist--cta-section h2 {
+  font-size: 1.6rem;
+  color: var(--brand-brown);
+  border-left: 6px solid var(--brand-cyan);
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+
+/* Special styling for specific subsections */
+.whyweexist--content-section[data-title="Planting the Seed for Change"] {
+  border-left: 8px solid var(--brand-cyan);
+}
+
+.whyweexist--content-section[data-title="A Bridge Built on Trust and Understanding"] {
+  border-left: 8px solid var(--brand-brown);
+}
+
+.whyweexist--content-section ul,
+.whyweexist--solution-section ul {
+  padding-left: 24px;
+  margin-top: 0.5rem;
+}
+
+.whyweexist--quiet-burden-p1 {
+  margin-bottom: 1rem !important;
+}
+
+.whyweexist--content-section li,
+.whyweexist--solution-section li {
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.whyweexist--p {
+  width: 100%;
+  max-width: 650px !important;
+  text-align: center;
+  margin: 1.25rem auto;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+}
+
+.whyweexist--h2 {
+  letter-spacing: 0.45px;
+}
+
+.whyweexist--solution-section-p1 {
+  text-align: left;
+}
+
+.whyweexist--content-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 24px 0 0 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid gray;
+}
+
+.font-contrast {
+  text-shadow: 0 1px 1px #333;
+  position: relative;
+  top: -1px;
+}
+
+.whyweexist--solution-section {
+  background-color: var(--highlight-bg);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  border: 2px solid var(--brand-brown);
+}
+
+.whyweexist--cta-button {
+  background-color: var(--brand-cyan);
+  color: var(--brand-blue-dark);
+  padding: 14px 30px;
+  font-size: 1rem;
+  border: 2px solid #f5f5f5;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.whyweexist--cta-button:hover {
+  background-color: #00cccc;
+}
+
+.whyweexist--footer {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: normal !important;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.whyweexist--highlight {
+  background-color: var(--highlight-bg);
+  padding: 10px 14px;
+  border-left: 4px solid var(--brand-cyan);
+  display: block;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.whyweexist__section--trust-understanding h2 {
+  border-left: 4px solid var(--brand-brown);
+}
+
+.whyweexist__section--trustworthy-solution {
+  border-left: 8px solid var(--brand-brown);
+}
+
+.whyweexist__section--trustworthy-solution h2 {
+  border-left: 4px solid var(--brand-brown);
+}
+
+.whyweexist--cta-section {
+  background-color: var(--brand-blue-dark);
+  color: #fff;
+  padding: 50px 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+  border: 2px solid #ababab;
+  border-left: 8px solid #ababab;
+}
+
+.whyweexist--content-section-journey-forward {
+  border: 2px solid #a6a6a6 !important;
+}
+
+.whyweexist--seed-for-change {
+  border: 2px solid #ababab;
+}
+
+.whyweexist--content-section[data-title="Planting the Seed for Change"] {
+  border: 2px solid #a6a6a6;
+  border-left: 8px solid var(--brand-cyan);
+}
+
+@media (max-width: 768px) {
+  .whyweexist--main-logo {
+    width: 295px;
+  }
+  .whyweexist--hero-section h1 {
+    font-size: 2rem;
+  }
+  .whyweexist--p {
+    font-size: 1.05rem;
+  }
+}

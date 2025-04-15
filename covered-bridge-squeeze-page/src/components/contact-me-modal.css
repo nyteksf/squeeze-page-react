@@ -5,7 +5,7 @@
 */
 
 .cyan {
-  color: cyan; 
+  color: cyan;
   margin-left: 4px;
 }
 
@@ -169,7 +169,7 @@
   letter-spacing: -0.25px;
   margin-top: 8px;
   margin-bottom: -8px;
-  color: #333;
+  color: #242424;
 }
 
 .modal__title--contact,
@@ -376,9 +376,48 @@ textarea:focus {
 
 .gradient-txt {
   background: linear-gradient(180deg, var(--primary), rgb(69, 255, 255));
- /* background: linear-gradient(180deg, var(--primary) 0%, rgb(0,200,200) 100%); */
+  /* background: linear-gradient(180deg, var(--primary) 0%, rgb(0,200,200) 100%); */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .contact-modal {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+    overflow-y: auto; /* enables scrolling in modal */
+    position: fixed;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .modal__half {
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 2rem 1.25rem;
+    box-sizing: border-box;
+  }
+
+  .modal__about,
+  .modal__contact {
+    height: auto;
+    overflow: visible;
+    padding-top: 2rem;
+  }
+
+  body.modal-block-scroll {
+    overflow: hidden; /* keep background locked */
+  }
+
+  .modal__exit {
+    top: 8px;
+    right: 22px;
+  }
 }

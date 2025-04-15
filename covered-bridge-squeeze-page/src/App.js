@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import FaqPage from "./pages/FaqPage";
 import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
+import WhyWeExist from "./pages/WhyWeExist";
 import ContactPage from "./pages/ContactPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/whyweexist" element={<WhyWeExist />} />
           {/* LEGAL */}
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsAndConditions />} />

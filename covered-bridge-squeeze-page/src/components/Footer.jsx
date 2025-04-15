@@ -56,7 +56,10 @@ const Footer = ({ footerRef, isVisible = false, ScrollReveal = false }) => {
                       <Link to="/faq">FAQ</Link>
                     </li>
                     <li className="footer-link">
-                      <Link to="/about">About</Link>
+                      <Link to="/about">About Us</Link>
+                    </li>
+                    <li className="footer-link">
+                      <Link to="/whyweexist">Why We Exist</Link>
                     </li>
                     {/* 
                   <li className="footer-link">

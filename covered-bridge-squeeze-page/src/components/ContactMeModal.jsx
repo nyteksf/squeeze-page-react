@@ -157,8 +157,13 @@ const ContactMeModal = ({
             <em>
               our team is still ready to take a fresh look, and we respect
               sellers who take time to make the right decision.
-            </em>
+            </em>{" "}
+            We're waiting to help you choose which option is best when it comes
+            to submitting your impending deal for review by our team, so go
+            right ahead.
           </p>
+
+          <p>Talk soon.</p>
 
           <p className="modal__tagline">
             <small>

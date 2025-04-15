@@ -22,21 +22,35 @@ const AboutPage = () => {
   const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
-    window.onload = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      setIsLoading(false);
-    };
-
-    // Using window.onload to ensure all resources are loaded
-    // Fallback timeout in case onload doesn't trigger
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3500); // 3.5 seconds fallback
-
-    return () => {
-      clearTimeout(timer); // Clean up the timer
-    };
-  }, []);
+      // Track DOM content loaded
+      const handleDOMContentLoaded = () => {
+        // Your critical elements are ready, but maybe not images
+        setIsLoading(false);
+      };
+  
+      if (
+        document.readyState === "interactive" ||
+        document.readyState === "complete"
+      ) {
+        handleDOMContentLoaded();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        document.addEventListener("DOMContentLoaded", handleDOMContentLoaded);
+  
+        return () =>
+          document.removeEventListener(
+            "DOMContentLoaded",
+            handleDOMContentLoaded
+          );
+      }
+  
+      // Safety timeout - ensure loading screen disappears after a maximum time
+      const safetyTimeout = setTimeout(() => {
+        setIsLoading(false);
+      }, 5000); // 5 seconds max loading time
+  
+      return () => clearTimeout(safetyTimeout);
+    }, []);
 
   const launchContactModal = (e) => {
     e.preventDefault();
@@ -162,8 +176,8 @@ const AboutPage = () => {
             <section className="testimonial">
               <p className="card__p">
                 "Working with Covered Bridge was easy. I didn't have to lift a
-                finger throughout the entire process. And he paid me in under
-                two weeks just like he said."
+                finger throughout the entire process. And I got paid in two
+                weeks exactly."
               </p>
               <p className="testimonial-author">— John D., Property Seller</p>
             </section>

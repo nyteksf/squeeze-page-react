@@ -24,20 +24,34 @@ const FaqPage = () => {
   const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
-    // Using window.onload to ensure all resources are loaded
-    window.onload = () => {
+    // Track DOM content loaded
+    const handleDOMContentLoaded = () => {
+      // Your critical elements are ready, but maybe not images
+      setIsLoading(false);
+    };
+
+    if (
+      document.readyState === "interactive" ||
+      document.readyState === "complete"
+    ) {
+      handleDOMContentLoaded();
       window.scrollTo({ top: 0, behavior: "smooth" });
-      setIsLoading(false);
-    };
+    } else {
+      document.addEventListener("DOMContentLoaded", handleDOMContentLoaded);
 
-    // Fallback timeout in case onload doesn't trigger
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3500); // 3.5 seconds fallback
+      return () =>
+        document.removeEventListener(
+          "DOMContentLoaded",
+          handleDOMContentLoaded
+        );
+    }
 
-    return () => {
-      clearTimeout(timer); // Clean up the timer
-    };
+    // Safety timeout - ensure loading screen disappears after a maximum time
+    const safetyTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // 5 seconds max loading time
+
+    return () => clearTimeout(safetyTimeout);
   }, []);
 
   const launchContactModal = (e) => {

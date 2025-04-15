@@ -374,6 +374,7 @@
   padding: 2rem 1rem;
   text-align: center;
   display: none;
+  width: 100vw;
 }
 
 .contact-card {
@@ -796,4 +797,9 @@
   .video-cta--btn-txt {
     font-size: 12px;
   }
+}
+
+.video-section--inner > *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
