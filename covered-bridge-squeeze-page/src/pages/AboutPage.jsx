@@ -17,11 +17,9 @@ import "./about-page.css";
 const AboutPage = () => {
   const footerRef = useRef(null);
 
+  const setIsModalAnimating = useState(false)[1];
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const setIsModalAnimating = useState(false)[1];
-
-  console.log(_isModalAnimating)
 
   useEffect(() => {
     // Track DOM content loaded
