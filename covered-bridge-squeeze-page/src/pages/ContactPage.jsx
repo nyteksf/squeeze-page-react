@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -16,9 +16,9 @@ import "./contact-page.css";
 
 const ContactPage = () => {
   const footerRef = useRef(null);
+  const setIsModalAnimating = useState(false)[1];
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
     // Track DOM content loaded
@@ -75,6 +75,7 @@ const ContactPage = () => {
       {isLoading ? (
         <LoadingState />
       ) : (
+        
         <div className="contact-container about-container">
           <div className="inner-container">
             <header className="contact--header">
@@ -101,12 +102,12 @@ const ContactPage = () => {
                 <h2 className="gradient-text">Email</h2>
                 <hr className="card__divider" />
                 <p className="card__p">
-                  <a
+                  <Link
                     className="email-anchor"
                     href="mailto:info@coveredbridge.properties"
                   >
                     info@coveredbridge.properties
-                  </a>
+                  </Link>
                 </p>
               </article>
 

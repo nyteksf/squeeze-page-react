@@ -19,9 +19,9 @@ import "./faq-page.css";
 const FaqPage = () => {
   const footerRef = useRef(null);
 
+  const setIsModalAnimating = useState(false)[1];
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
     // Track DOM content loaded
@@ -213,13 +213,13 @@ const FaqPage = () => {
 
             <section className="cta">
               <h2>Want clarity on something not covered above?</h2>
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="btn about__submit-btn"
                 onClick={launchContactModal}
               >
                 Contact Us With Your Question Here
-              </a>
+              </Link>
               <div className="contact-info">
                 <div className="contact-item">
                   <svg

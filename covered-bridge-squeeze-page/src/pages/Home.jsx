@@ -133,10 +133,12 @@ const Home = () => {
                 <img
                   src="/logo-sm-3.png"
                   className="logo-main logo-main--img"
+                  alt="logo"
                 />
                 <img
                   src="/logo-sm-3.png"
                   className="logo-main--dark logo-main--img"
+                  alt="logo dark"
                 />
               </figure>
               <ScrollReveal direction="up">

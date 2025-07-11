@@ -11,9 +11,9 @@ import "./why-we-exist.css";
 const WhyWeExist = () => {
   const footerRef = useRef(null);
 
+  const setIsModalAnimating = useState(false)[1];
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalAnimating, setIsModalAnimating] = useState(false);
 
   useEffect(() => {
     // Track DOM content loaded
@@ -258,6 +258,7 @@ const WhyWeExist = () => {
                   <a
                     href="https://www.landthink.com/pulse-most-oppose-higher-taxes-on-out-of-state-landowners/#:~:text=According%20to%20the%20August%20LANDTHINK,Americans%20are%20growing%20increasingly%20frustrated."
                     target="_blank"
+                    rel="noreferrer"
                     title="Confirm statistics"
                   >
                     property taxes have been rising sharply, even surging by up
@@ -269,6 +270,7 @@ const WhyWeExist = () => {
                   <a
                     href="https://www.landthink.com/pulse-most-oppose-higher-taxes-on-out-of-state-landowners/#:~:text=According%20to%20the%20August%20LANDTHINK,Americans%20are%20growing%20increasingly%20frustrated."
                     target="_blank"
+                    rel="noreferrer"
                     title="Confirm statistics"
                   >
                     nearly two-thirds of Americans feel their property taxes are

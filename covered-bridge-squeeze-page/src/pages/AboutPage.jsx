@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router";
+import { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -19,38 +19,40 @@ const AboutPage = () => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalAnimating, setIsModalAnimating] = useState(false);
+  const setIsModalAnimating = useState(false)[1];
+
+  console.log(_isModalAnimating)
 
   useEffect(() => {
-      // Track DOM content loaded
-      const handleDOMContentLoaded = () => {
-        // Your critical elements are ready, but maybe not images
-        setIsLoading(false);
-      };
-  
-      if (
-        document.readyState === "interactive" ||
-        document.readyState === "complete"
-      ) {
-        handleDOMContentLoaded();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        document.addEventListener("DOMContentLoaded", handleDOMContentLoaded);
-  
-        return () =>
-          document.removeEventListener(
-            "DOMContentLoaded",
-            handleDOMContentLoaded
-          );
-      }
-  
-      // Safety timeout - ensure loading screen disappears after a maximum time
-      const safetyTimeout = setTimeout(() => {
-        setIsLoading(false);
-      }, 5000); // 5 seconds max loading time
-  
-      return () => clearTimeout(safetyTimeout);
-    }, []);
+    // Track DOM content loaded
+    const handleDOMContentLoaded = () => {
+      // Your critical elements are ready, but maybe not images
+      setIsLoading(false);
+    };
+
+    if (
+      document.readyState === "interactive" ||
+      document.readyState === "complete"
+    ) {
+      handleDOMContentLoaded();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.addEventListener("DOMContentLoaded", handleDOMContentLoaded);
+
+      return () =>
+        document.removeEventListener(
+          "DOMContentLoaded",
+          handleDOMContentLoaded
+        );
+    }
+
+    // Safety timeout - ensure loading screen disappears after a maximum time
+    const safetyTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // 5 seconds max loading time
+
+    return () => clearTimeout(safetyTimeout);
+  }, []);
 
   const launchContactModal = (e) => {
     e.preventDefault();
@@ -187,13 +189,13 @@ const AboutPage = () => {
                 Ready to Make a Strong Decision Toward
                 <br /> a Brighter Financial Future?
               </h2>
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="btn about__submit-btn"
                 onClick={launchContactModal}
               >
                 Get <strong>Your</strong> Cash Offer Today
-              </a>
+              </Link>
               <div className="contact-info">
                 <div className="contact-item">
                   <svg
