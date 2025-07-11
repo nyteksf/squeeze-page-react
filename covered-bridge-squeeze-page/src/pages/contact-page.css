@@ -51,6 +51,8 @@
 .contact__submit-btn {
   padding: 1rem 6rem;
   font-size: 18px;
+  border-bottom-right-radius: 6px !important;
+  cursor: pointer;
 }
 
 .contact__submit-btn:hover {

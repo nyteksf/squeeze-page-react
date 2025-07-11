@@ -75,7 +75,6 @@ const ContactPage = () => {
       {isLoading ? (
         <LoadingState />
       ) : (
-        
         <div className="contact-container about-container">
           <div className="inner-container">
             <header className="contact--header">
@@ -169,13 +168,12 @@ const ContactPage = () => {
               <h2>
                 Prefer to send a message <em>right now?</em>
               </h2>
-              <a
-                href="#"
+              <button
                 className="btn contact__submit-btn"
                 onClick={launchContactModal}
               >
                 Message Us Here
-              </a>
+              </button>
             </section>
           </div>
           <Footer footerRef={footerRef} isVisible="false" />
