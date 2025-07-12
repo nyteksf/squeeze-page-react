@@ -230,7 +230,7 @@ const PrivacyPolicy = ({ footerRef }) => {
                   joe@coveredbridge.properties
                 </a>
                 <br />
-                <u>Phone:</u> 866-610-LAND <i style="color:slate;">(5263)</i>
+                <u>Phone:</u> 866-610-LAND <i className="slategray">(5263)</i>
               </address>
             </section>
 
