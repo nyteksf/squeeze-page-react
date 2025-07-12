@@ -103,9 +103,9 @@ const ContactPage = () => {
                 <p className="card__p">
                   <Link
                     className="email-anchor"
-                    href="mailto:info@coveredbridge.properties"
+                    href="mailto:joe@coveredbridge.properties"
                   >
-                    info@coveredbridge.properties
+                    joe@coveredbridge.properties
                   </Link>
                 </p>
               </article>
@@ -117,12 +117,12 @@ const ContactPage = () => {
                 <h2 className="gradient-text">Phone</h2>
                 <hr className="card__divider" />
                 <p className="card__p">
-                  <a className="phone-anchor" href="tel:+17025551234">
-                    (702) 555-1234
+                  <a className="phone-anchor" href="tel:866-610-5263">
+                    866-610-LAND
                   </a>
                   <br />
                   <span className="phone__blurb">
-                    Mon–Sun: 24/7 Operator Service
+                    Mon–Sun: 10am-10pm PST Operator Service
                   </span>
                   <br />
                   <span className="phone__final-blurb">
@@ -140,9 +140,9 @@ const ContactPage = () => {
                 <p className="card__p">
                   Covered Bridge Properties
                   <br />
-                  1234 Rural Land Rd.
+                  304 S. Jones Blvd. #2156,
                   <br />
-                  Las Vegas, NV 89123
+                  Las Vegas, NV 89107
                 </p>
               </article>
 
@@ -153,7 +153,7 @@ const ContactPage = () => {
                 <h2 className="gradient-text">Office Hours</h2>
                 <hr className="card__divider" />
                 <p className="card__p">
-                  Monday to Friday: 9am – 5pm PST
+                  Monday to Friday: 10am – 10pm PST
                   <br />
                   Weekends: Closed
                   <br />
