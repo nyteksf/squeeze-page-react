@@ -559,8 +559,7 @@ const WhyWeExist = () => {
 
               <footer className="whyweexist--footer">
                 <p className>
-                  — Joe Coviello, Managing Member of Covered Bridge Properties,
-                  <br />a brand owned by Covered Bridge Property Holdings LLC
+                  — Joe Coviello, Managing Member
                 </p>
               </footer>
             </div>
