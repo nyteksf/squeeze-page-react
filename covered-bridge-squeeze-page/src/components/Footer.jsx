@@ -121,8 +121,8 @@ const Footer = ({ footerRef, isVisible = false, ScrollReveal = false }) => {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Covered Bridge Properties LLC. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} Covered Bridge Property Holdings
+          LLC., All rights reserved.
         </p>
       </div>
     </footer>
