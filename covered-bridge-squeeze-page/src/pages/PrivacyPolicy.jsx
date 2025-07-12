@@ -56,12 +56,13 @@ const PrivacyPolicy = ({ footerRef }) => {
             <section className="privacy-policy-section">
               <h3>Introduction</h3>
               <p>
-                Welcome to Covered Bridge Properties LLC ("we," "our," or "the
-                Company"). We appreciate your interest in our services and your
-                trust in providing us with your personal information. This
-                Privacy Policy explains how we collect, use, disclose, and
-                safeguard your information when you interact with our website,
-                services, or representatives.
+                Welcome to Covered Bridge Properties ("we," "our," or "the
+                Company"), a trademarked brand of Covered Bridge Property
+                Holdings LLC, a Wyoming Limited Liability Company. We appreciate
+                your interest in our services and your trust in providing us
+                with your personal information. This Privacy Policy explains how
+                we collect, use, disclose, and safeguard your information when
+                you interact with our website, services, or representatives.
               </p>
             </section>
 
@@ -218,14 +219,18 @@ const PrivacyPolicy = ({ footerRef }) => {
               <h3>Contact Us</h3>
               <p>If you have questions or concerns, contact us at:</p>
               <address>
-                Covered Bridge Properties LLC
+                <strong>Covered Bridge Property Holdings LLC</strong>
+                <br />
+                304 S. Jones Blvd. #2156,
+                <br />
+                Las Vegas, NV 89107
                 <br />
                 <u>Email:</u>{" "}
-                <a href="mailto:info@coveredbridge.properties">
-                  info@coveredbridge.properties
+                <a href="mailto:joe@coveredbridge.properties">
+                  joe@coveredbridge.properties
                 </a>
                 <br />
-                <u>Phone:</u> (555) 123-4567
+                <u>Phone:</u> 866-610-LAND <i style="color:slate;">(5263)</i>
               </address>
             </section>
 
