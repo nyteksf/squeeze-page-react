@@ -276,7 +276,7 @@ const Home = () => {
                   <BentoTilt>
                     <div className="contact-option cursor-not-allowed">
                       <a
-                        href="tel:866-"
+                        href="tel:866-610-5263"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn--option cursor-not-allowed"
