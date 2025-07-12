@@ -559,7 +559,7 @@ const WhyWeExist = () => {
 
               <footer className="whyweexist--footer">
                 <p className>
-                  — Joe Coviello, Founder of Covered Bridge Properties
+                  — Joe Coviello, Managing Member of Covered Bridge Properties
                 </p>
               </footer>
             </div>
