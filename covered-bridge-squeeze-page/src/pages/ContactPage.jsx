@@ -121,9 +121,7 @@ const ContactPage = () => {
                     866-610-LAND
                   </a>
                   <br />
-                  <span className="phone__blurb">
-                    Mon–Sun: 10am-10pm PST Operator Service
-                  </span>
+                  <span className="phone__blurb">Mon–Sun: 10am-10pm PST</span>
                   <br />
                   <span className="phone__final-blurb">
                     (Calls returned within one business day)
