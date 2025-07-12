@@ -274,12 +274,12 @@ const Home = () => {
               <div className="contact-buttons">
                 <ScrollReveal direction="left" delay={0.2}>
                   <BentoTilt>
-                    <div className="contact-option">
+                    <div className="contact-option cursor-not-allowed">
                       <a
                         href="https://reception247.com/YOUR_UNIQUE_LINK"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn--option"
+                        className="btn--option cursor-not-allowed"
                       >
                         📞 Talk To A Real Person (24/7)
                       </a>
@@ -295,12 +295,12 @@ const Home = () => {
 
                 <ScrollReveal direction="up" delay={0.3}>
                   <BentoTilt>
-                    <div className="contact-option ai-asst-div">
+                    <div className="contact-option cursor-not-allowed">
                       <a
                         href="https://m.me/YOUR_PAGE_USERNAME"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn--option btn--option-secondary"
+                        className="btn--option btn--option-secondary cursor-not-allowed"
                       >
                         🤖 Make a Deal With Our AI Assistant
                       </a>

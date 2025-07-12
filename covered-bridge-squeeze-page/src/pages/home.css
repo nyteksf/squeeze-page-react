@@ -804,7 +804,6 @@
   padding-bottom: 0;
 }
 
-.ai-asst-div,
-.call-center-div {
+.cursor-not-allowed {
   cursor: not-allowed;
 }
