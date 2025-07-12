@@ -110,7 +110,7 @@ const Footer = ({ footerRef, isVisible = false, ScrollReveal = false }) => {
                           </a>
                         </li>
                         <li className="footer__list-item footer__list-item--social cursor-not-allowed">
-                          <div className="footer__social-link footer__social-link--instagram">
+                          <div className="footer__social-link footer__social-link--instagram cursor-not-allowed">
                             <FontAwesomeIcon icon={faInstagram} />
                           </div>
                         </li>
