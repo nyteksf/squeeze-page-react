@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
+import { useEffect, useRef, useState } from "react";
 
 import LoadingState from "../components/LoadingState";
 import ScrollReveal from "../components/ScrollReveal";
@@ -241,10 +242,12 @@ const Home = () => {
                   className="btn--cta btn--cta-below-video"
                   onClick={handleShowOptions}
                 >
-                  <span className="video-cta--btn-txt">“I’m Ready To Get Paid For My Land"{" "}
-                  <span className="cta--arrow">
-                    <strong>→</strong>
-                  </span></span>
+                  <span className="video-cta--btn-txt">
+                    “I’m Ready To Get Paid For My Land"{" "}
+                    <span className="cta--arrow">
+                      <strong>→</strong>
+                    </span>
+                  </span>
                 </button>
               </ScrollReveal>
             </div>
@@ -323,12 +326,14 @@ const Home = () => {
                       >
                         📝 Print & Mail Your Land Info Instead
                       </a>
-                      <p className="microtext">
-                        Print and send us your land info instead. We’ll evaluate
-                        it and get your offer started.
-                        <br />
-                        (No guarantee of acceptance.)
-                      </p>
+                      <Link to="/printable-sell-my-land-form.pdf">
+                        <p className="microtext">
+                          Print and send us your land info instead. We’ll
+                          evaluate it and get your offer started.
+                          <br />
+                          (No guarantee of acceptance.)
+                        </p>
+                      </Link>
                     </div>
                   </BentoTilt>
                 </ScrollReveal>
