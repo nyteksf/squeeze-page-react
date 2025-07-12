@@ -274,12 +274,12 @@ const Home = () => {
               <div className="contact-buttons">
                 <ScrollReveal direction="left" delay={0.2}>
                   <BentoTilt>
-                    <div className="contact-option cursor-not-allowed">
+                    <div className="contact-option">
                       <a
                         href="tel:866-610-5263"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn--option cursor-not-allowed"
+                        className="btn--option"
                       >
                         📞 Talk To A Real Person (24/7)
                       </a>
