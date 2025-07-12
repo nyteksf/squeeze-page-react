@@ -154,9 +154,9 @@ const ContactPage = () => {
                 <h2 className="gradient-text">Office Hours</h2>
                 <hr className="card__divider" />
                 <p className="card__p">
-                  Monday to Friday: 10am – 10pm PST
+                  Monday to Saturday: 10am – 10pm PST
                   <br />
-                  Weekends: Closed
+                  Sundays: Closed
                   <br />
                   <span className="office-hours--final-blurb">
                     We respond within 24 hours.
