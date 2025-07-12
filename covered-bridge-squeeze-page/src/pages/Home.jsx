@@ -276,7 +276,7 @@ const Home = () => {
                   <BentoTilt>
                     <div className="contact-option cursor-not-allowed">
                       <a
-                        href="https://reception247.com/YOUR_UNIQUE_LINK"
+                        href="tel:866-"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn--option cursor-not-allowed"
