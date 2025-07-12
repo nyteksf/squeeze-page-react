@@ -296,7 +296,7 @@ const Home = () => {
 
                 <ScrollReveal direction="up" delay={0.3}>
                   <BentoTilt>
-                    <div className="contact-option">
+                    <div className="contact-option ai-asst-div">
                       <a
                         href="https://m.me/YOUR_PAGE_USERNAME"
                         target="_blank"
