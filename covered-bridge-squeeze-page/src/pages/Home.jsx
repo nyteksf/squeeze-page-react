@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { useEffect, useRef, useState } from "react";
 
 import LoadingState from "../components/LoadingState";
