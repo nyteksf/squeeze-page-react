@@ -118,7 +118,10 @@ const ContactPage = () => {
                 <hr className="card__divider" />
                 <p className="card__p">
                   <a className="phone-anchor" href="tel:866-610-5263">
-                    866-610-LAND
+                    866-610-LAND{" "}
+                    <i>
+                      <span className="slategray">(5263)</span>
+                    </i>
                   </a>
                   <br />
                   <span className="phone__blurb">Mon–Sun: 10am-10pm PST</span>
