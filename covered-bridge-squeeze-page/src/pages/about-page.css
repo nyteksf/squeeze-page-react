@@ -370,3 +370,7 @@ header p {
     font-size: 1.35rem;
   }
 }
+
+.slategray {
+  color: slategray;
+}
