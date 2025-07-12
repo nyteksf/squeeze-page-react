@@ -96,16 +96,20 @@ const Footer = ({ footerRef, isVisible = false, ScrollReveal = false }) => {
                     <li className="footer__list-item">
                       <ul className="footer__social-links">
                         <li className="footer__list-item footer__list-item--social">
-                          <div className="footer__social-link footer__social-link--facebook">
-                            <FontAwesomeIcon icon={faFacebook} />
-                          </div>
+                          <a href="https://www.facebook.com/profile.php?id=61577295317770">
+                            <div className="footer__social-link footer__social-link--facebook">
+                              <FontAwesomeIcon icon={faFacebook} />
+                            </div>
+                          </a>
                         </li>
                         <li className="footer__list-item footer__list-item--social">
-                          <div className="footer__social-link footer__social-link--twitter">
-                            <FontAwesomeIcon icon={faTwitter} />
-                          </div>
+                          <a href="https://www.x.com/BridgeLandCo/">
+                            <div className="footer__social-link footer__social-link--twitter">
+                              <FontAwesomeIcon icon={faTwitter} />
+                            </div>
+                          </a>
                         </li>
-                        <li className="footer__list-item footer__list-item--social">
+                        <li className="footer__list-item footer__list-item--social cursor-not-allowed">
                           <div className="footer__social-link footer__social-link--instagram">
                             <FontAwesomeIcon icon={faInstagram} />
                           </div>

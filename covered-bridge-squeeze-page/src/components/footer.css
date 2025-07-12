@@ -456,3 +456,7 @@
 .footer__social-link:hover {
   color: cyan;
 }
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
