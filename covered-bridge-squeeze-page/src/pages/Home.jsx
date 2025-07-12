@@ -326,14 +326,12 @@ const Home = () => {
                       >
                         📝 Print & Mail Your Land Info Instead
                       </a>
-                      <Link to="/printable-sell-my-land-form.pdf">
-                        <p className="microtext">
-                          Print and send us your land info instead. We’ll
-                          evaluate it and get your offer started.
-                          <br />
-                          (No guarantee of acceptance.)
-                        </p>
-                      </Link>
+                      <p className="microtext">
+                        Print and send us your land info instead. We’ll evaluate
+                        it and get your offer started.
+                        <br />
+                        (No guarantee of acceptance.)
+                      </p>
                     </div>
                   </BentoTilt>
                 </ScrollReveal>
