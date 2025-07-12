@@ -214,7 +214,8 @@ const AboutPage = () => {
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
                   <a href="mailto:joe@coveredbridge.properties">
-                    <span>joe@coveredbridge.properties</span>
+                    <span>joe@coveredbridge.properties</span> /* MAKE INFO EMAIL
+                    */
                   </a>
                 </div>
               </div>
