@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import Footer from "../components/Footer";
 import LoadingState from "../components/LoadingState";
@@ -11,7 +11,7 @@ const TermsAndConditions = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Scroll to top immediately when component mounts - add this line
+    // Scroll to top immediately when component mounts
     window.scrollTo(0, 0);
 
     window.onload = () => {
@@ -19,7 +19,6 @@ const TermsAndConditions = () => {
       setIsLoading(false);
     };
 
-    // Rest of your existing code remains the same
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 3500);
